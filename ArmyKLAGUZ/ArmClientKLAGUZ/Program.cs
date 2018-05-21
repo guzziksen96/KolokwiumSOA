@@ -37,7 +37,7 @@ namespace ArmClientKLAGUZ
             //    Power = 1
             //};
 
-            Console.WriteLine("ModelName: {0} Power: {1} Shield: {2}", t.ModelName, t.Power, t.Shield);
+            Console.WriteLine("ModelName: {0}  Power: {1}  Shield: {2}", t.ModelName, t.Power, t.Shield);
 
             client.Close();
             Console.ReadKey();

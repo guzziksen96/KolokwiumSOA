@@ -15,8 +15,7 @@ namespace NewFactoryKLAGUZ.Controllers
     {
         private ITankRepository tankRepository = new RepsitoriesKLAGUZ.TankReposiory();
         private readonly string _tankConnection = @"C:/tmp/tanks";
-
-        // GET api/values
+        
         public List<Tank> Get()
         {
             return tankRepository.GetAllTanks().ToList();
@@ -39,8 +38,7 @@ namespace NewFactoryKLAGUZ.Controllers
         {
             return tankRepository.CreateTank(value);
         }
-
-        [HttpPost]
+        
         [ResponseType(typeof(Tank))]
         public Tank Put(int id, [FromBody]Tank tank)
         {
@@ -53,6 +51,7 @@ namespace NewFactoryKLAGUZ.Controllers
                     return null;
             }
         }
+        
 
         [ResponseType(typeof(bool))]
         public bool Delete(int id)
